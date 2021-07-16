@@ -1,3 +1,5 @@
+const searchTerm = 1
+
 const notes = [
 {
     id: 1,
@@ -33,6 +35,10 @@ const noteAboutToday = {
 notes.push(noteAboutToday)
 
 for (const item of notes) {
-        console.log(`Today i worked on ${item.subject} and I feel ${item.feeling}`);
-    
+    if (item.id === searchTerm) {
+        console.log(`Today i worked on ${item.subject} and 
+I feel ${item.feeling}
+~~~~~~~~~~~~        
+`);
+    }
 }
