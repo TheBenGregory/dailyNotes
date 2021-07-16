@@ -22,6 +22,16 @@ const notes = [
 }
 ]
 
+const noteAboutToday = {
+    id: 4,
+    subject: "JavaScript",
+    date: "16 JUL 2021",
+    feeling: "wobbly but improving",
+    timeSpent: "4 hours"
+}
+
+notes.push(noteAboutToday)
+
 for (const item of notes) {
         console.log(`Today i worked on ${item.subject} and I feel ${item.feeling}`);
     
