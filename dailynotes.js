@@ -1,4 +1,4 @@
-const searchTerm = 1
+// const searchTerm = notesObject
 
 const notes = [
 {
@@ -27,16 +27,27 @@ const notes = [
 const noteAboutToday = {
     id: 4,
     subject: "JavaScript",
-    date: "16 JUL 2021",
     feeling: "wobbly but improving",
     timeSpent: "4 hours"
 }
 
-notes.push(noteAboutToday)
+
+
+const addNewNote = (notesObject) => {
+    const lastIndex = notes.length -1
+    const currentLastNote = notes[lastIndex]
+    const maxId = currentLastNote.id
+    const idForNewNote = Date.now
+    notesObject.id = idForNewNote
+    notes.push(notesObject)}
+
+    addNewNote(noteAboutToday)
+
 
 for (const item of notes) {
-    if (item.id === searchTerm) {
-        console.log(`Today i worked on ${item.subject} and 
+   
+    {
+        console.log(`Today is ${item.date} and i worked on ${item.subject} and 
 I feel ${item.feeling}
 ~~~~~~~~~~~~        
 `);
